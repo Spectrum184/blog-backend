@@ -1,0 +1,48 @@
+{
+  "name": "blog-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Thanh blog backend",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "prepare": "husky install",
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.23.1",
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.1.2",
+    "@chartbrew/plugin-strapi": "^0.3.1",
+    "@offset-dev/strapi-calendar": "^0.0.9",
+    "@strapi/design-system": "^1.2.2",
+    "@strapi/icons": "^1.2.2",
+    "@strapi/plugin-i18n": "4.3.8",
+    "@strapi/plugin-users-permissions": "4.3.8",
+    "@strapi/provider-email-sendgrid": "^4.3.8",
+    "@strapi/provider-upload-cloudinary": "^4.3.8",
+    "@strapi/strapi": "4.3.8",
+    "better-sqlite3": "7.4.6",
+    "mysql": "^2.18.1",
+    "strapi-plugin-cookie-manager": "^1.0.7",
+    "strapi-plugin-rest-cache": "^4.2.4",
+    "strapi-plugin-sitemap": "^2.0.8",
+    "strapi-plugin-slugify": "^2.2.3",
+    "strapi-provider-rest-cache-memory": "^4.2.4"
+  },
+  "author": {
+    "name": "ThanhTK"
+  },
+  "strapi": {
+    "uuid": "01889225-75e4-4828-9e38-f9ffd9fa9632"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

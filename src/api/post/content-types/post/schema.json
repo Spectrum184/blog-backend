@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "ogMetaDescription": {
+      "type": "text",
+      "required": true
+    },
+    "metaKeyword": {
+      "type": "text",
+      "required": true
+    },
+    "views": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "ogMetaImage": {
+      "type": "text",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "posts"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "post"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "posts"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "post"
+    }
+  }
+}

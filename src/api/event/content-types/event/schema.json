@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Events",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startTime": {
+      "required": true,
+      "type": "datetime"
+    },
+    "endTime": {
+      "type": "datetime"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
