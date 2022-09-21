@@ -37,10 +37,6 @@
       "type": "biginteger",
       "default": "0"
     },
-    "ogMetaImage": {
-      "type": "text",
-      "required": true
-    },
     "metaDescription": {
       "type": "text",
       "required": true
@@ -68,6 +64,37 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "post"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "likes": {
+      "type": "biginteger",
+      "required": false,
+      "default": "0"
+    },
+    "ogMetaTittle": {
+      "type": "string",
+      "required": true
+    },
+    "ogMetaImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

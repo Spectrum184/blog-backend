@@ -2,7 +2,7 @@ module.exports = ({ env }) => {
   return {
     ckeditor: true,
     chartbrew: true,
-    "cookie-manager": {
+    'cookie-manager': {
       enabled: true,
       config: {
         localization: true,
@@ -10,23 +10,23 @@ module.exports = ({ env }) => {
     },
     email: {
       config: {
-        provider: "sendgrid",
+        provider: 'sendgrid',
         providerOptions: {
-          apiKey: env("SENDGRID_API_KEY"),
+          apiKey: env('SENDGRID_API_KEY'),
         },
         settings: {
-          defaultFrom: "myemail@protonmail.com",
-          defaultReplyTo: "myemail@protonmail.com",
+          defaultFrom: env('DEFAULT_EMAIL_FROM'),
+          defaultReplyTo: env('DEFAULT_EMAIL_REPLY'),
         },
       },
     },
     upload: {
       config: {
-        provider: "cloudinary",
+        provider: 'cloudinary',
         providerOptions: {
-          cloud_name: env("CLOUDINARY_NAME"),
-          api_key: env("CLOUDINARY_KEY"),
-          api_secret: env("CLOUDINARY_SECRET"),
+          cloud_name: env('CLOUDINARY_NAME'),
+          api_key: env('CLOUDINARY_KEY'),
+          api_secret: env('CLOUDINARY_SECRET'),
         },
         actionOptions: {
           upload: {},
@@ -40,19 +40,25 @@ module.exports = ({ env }) => {
       config: {
         contentTypes: {
           post: {
-            field: "slug",
-            references: "title",
+            field: 'slug',
+            references: 'title',
           },
           tag: {
-            field: "slug",
-            references: "content",
+            field: 'slug',
+            references: 'content',
           },
           category: {
-            field: "slug",
-            references: "title",
+            field: 'slug',
+            references: 'title',
           },
         },
       },
+    },
+    'generate-data': {
+      enabled: true,
+    },
+    'custom-api': {
+      enabled: true,
     },
   };
 };

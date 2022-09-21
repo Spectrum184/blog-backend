@@ -74,6 +74,16 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "users"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
